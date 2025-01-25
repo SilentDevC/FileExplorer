@@ -1,6 +1,7 @@
 //---------------------------------------------------------------------//
 //The starting point of the algorithm 
 #include "CommandProcess.cpp"
+
 //---------------------------------------------------------------------//
 //---------------------------------------------------------------------//
 // custom file explorer - fsm 
@@ -15,7 +16,6 @@
 		// current problem is the fact that cd command cant take a full string input 
 		while (std::getline(std::cin , command)) {
 			std::array<std::string, 3U> comm_base = CommandSpecialSymbolProcess(command);
-			//CommandeExecute(comm_base, EntryDir);
 			CommandProcessFuncMap(comm_base);
 		}
 	}
@@ -33,7 +33,12 @@
 #ifndef EXCEPTIONS_HEAD
 	#include <stdexcept>
 #endif 
+
+#ifndef ErrorLogger 
+	#include "ErrorLogger.h"
+#endif // 
 //---------------------------------------------------------------------//
+
 #ifndef ErrorLogger 
 	#include "ErrorLogger.h"
 #endif // 
@@ -41,7 +46,6 @@
 int main(int argc, char** argv) {
 	try { 
 		FileExplorerInit();
-		return 0;
 	}
 	//---------------------------------------------------------------------//
 	catch (const ErrorManager& err) {

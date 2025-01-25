@@ -40,16 +40,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="prop.json">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="LogFile.dat">
-      <Filter>Resource Files</Filter>
-    </None>
+    <None Include="LogFile.dat" />
+    <None Include="prop.json" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="RestrictedAccessPaths.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
+    <Text Include="RestrictedAccessPaths.txt" />
   </ItemGroup>
 </Project>

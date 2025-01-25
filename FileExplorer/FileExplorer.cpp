@@ -254,16 +254,10 @@ void Directory::ShowDirectoryContents() const {
 	//auto fullpath = *this->_dir_path / DirPath; 
 	this->_dir_iter = FS::directory_iterator(*this->_dir_path);
 	//---------------------------------------------------------------------//
-	std::cout << "Directories are - " << std::endl;
-
 	for (const auto& entr : this->_dir_iter) {
-
-		for (int index = 0; index < FSM_HIDDEN_FILES_EXT.size() ; index++ ) {
-			std::cout << entr.path() << "-" << entr.file_size() << " bytes" << std::endl; 
-
-			if (entr.path().generic_string()[3] == FSM_HIDDEN_FILES_EXT[index]) {
-				std::cout << "Hidden file!" << std::endl; 
-			}
+		if (!(underlying_filename_string(entr)[0] == FSM_HIDDEN_FILES_EXT[0]
+			|| underlying_filename_string(entr)[0] == FSM_HIDDEN_FILES_EXT[1])) {
+			std::cout << entr.path().generic_string() << "-" << entr.file_size() << " bytes" << std::endl;
 		}
 	}
 }
@@ -296,7 +290,7 @@ inline uintmax_t Directory::DirectoryCounter() const {
 	//---------------------------------------------------------------------//
 }
 //---------------------------------------------------------------------//
-void ShowFilepathSymbols(FS::path& other) { 
+inline void ShowFilePathSymbols(const FS::path& other) { 
 	for (const auto& iter : other) {
 		std::cout << other.root_name()
 			<< other.root_directory()

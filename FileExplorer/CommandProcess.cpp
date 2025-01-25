@@ -67,7 +67,8 @@ inline std::array<std::string, 3U> CommandSpecialSymbolProcess(const std::string
 	//---------------------------------------------------------------------//
 }
 //---------------------------------------------------------------------//
-inline void CommandeExecute(const std::array<std::string, 3U>& other, Directory& Pdir) {
+//Deprecated
+inline void CommandExecute(const std::array<std::string, 3U>& other, Directory& Pdir) {
 	try {  
 		//---------------------------------------------------------------------//
 		std::vector<std::filesystem::path> Paths{ ReadTheRestFile() };

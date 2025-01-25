@@ -1,0 +1,6 @@
+# Ignore Visual Studio temporary files and folders
+.vs/
+*.db
+*.ipch
+*.VC.db
+*.log

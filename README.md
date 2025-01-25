@@ -3,6 +3,7 @@
 This is a custom file management system and error logging framework in C++.
 Implemented core filesystem operations, including file addition, removal, directory navigation, and permission handling.
 Designed an error logging system that converts error messages into binary data, stores them in a log file.
+It uses MS Visual Studio as a build system 
 
 File Explorer:
 

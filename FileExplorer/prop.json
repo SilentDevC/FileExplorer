@@ -1,0 +1,10 @@
+{
+    "Version": "1.0",
+    "Type": "FileExplorer",
+    "Project Name": "File_Explorer_Project",
+    "Class Description": {
+        "Name": "directory",
+        "Type": "class",
+        "Extention": "cpp"
+    }
+}

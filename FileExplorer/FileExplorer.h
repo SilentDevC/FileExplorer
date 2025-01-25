@@ -77,8 +77,8 @@ private:
 	void SetDirIter(const FS::path& npath) noexcept { _dir_iter = FS::directory_iterator(npath); }
 	void SetDirEntry(const FS::directory_entry& nentry) { *this->_dir_entry = nentry; }
 	void SetDirPath(const FS::path& npath) noexcept { *this->_dir_path = npath; }
-	inline std::string_view underlying_filename_string(const FS::directory_entry& other) const {
-		return std::string_view(other.path().filename().string());
+	inline std::string underlying_filename_string(const FS::directory_entry& other) const {
+		return (other.path().filename().string());
 	}
 	//---------------------------------------------------------------------//
 public:

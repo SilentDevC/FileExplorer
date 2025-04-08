@@ -24,6 +24,7 @@ What I've used:
   Exception handling for error resilience
   Modular design with custom classes for scalability
   Parts of the STL like shared pointer , bitset etc. 
+  Also for this project to compile properly you should have preinstalled Boost - Property Tree Module
 
 How to use:
 

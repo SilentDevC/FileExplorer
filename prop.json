@@ -1,0 +1,10 @@
+{
+    "Version": "1.0",
+    "Type": "FileExplorer",
+    "Project Name": "C_Project",
+    "Class Description": {
+        "Name": "dir",
+        "Type": "class",
+        "Extention": "cpp"
+    }
+}
